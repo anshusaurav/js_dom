@@ -38,6 +38,22 @@
     const h1 = document.getElementsByTagName("h1")[0];
     const p = document.getElementsByTagName("p")[0];
     const ul = document.getElementsByTagName("ul")[0];
-    // Your code goes here
+    
+    var ulElem = document.querySelector('ul');
+    ulElem.firstElementChild.style.background = 'pink';
+
+    var liArr = Array.from(ulElem.children);
+    liArr.forEach(liElem =>{
+      liElem.style.background = 'wheat';
+    });
+
+    liArr[liArr.length-1].style.background = 'pink';
+    
+    
+    
+
+
+
+
   </script>
 </html>

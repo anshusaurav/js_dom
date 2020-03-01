@@ -18,6 +18,13 @@ In index.html example:
 * `html` is the parent of `head`, `body`, and `script`.
 * `body` is the parent of `h1`, `h2`, `p` and `ul`, but not `li`, since `li` is two levels down from body.
 
+```js
+    const h1 = document.getElementsByTagName("h1")[0];
+    const p = document.getElementsByTagName("p")[0];
+    const ul = document.getElementsByTagName("ul")[0];
+
+    
+```
 ## Children Nodes
 The children of a node are the nodes that are one level below it. Any nodes beyond one level of nesting are usually referred to as descendants.
 

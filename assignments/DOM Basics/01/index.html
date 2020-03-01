@@ -10,6 +10,27 @@
     <body>
       <h1>Document Object Model</h1>
     <script>
+      let elemP = document.createElement('p');
+      document.body.append(elemP);
+
+      elemP.textContent = 'Hello Javascipt!';
+
+      //elemP.setAttribute('text-content', 'Hello Javascript!'); //Both works the same
+      elemP.innerHTML = `I love <strong>Javascript</strong>`;
+      let elemUl = document.createElement('ul');
+      
+      let arr = ['Buy Groceries', 'Feed the cat', 'Do laundry'];
+      arr.forEach((elem, index, arr) =>{
+        let elemLi = document.createElement('li');
+        elemLi.innerHTML = arr[index];
+        elemUl.appendChild(elemLi);
+      });
+      document.body.append(elemUl);
+
+      let newElemLi = document.createElement('li');
+      elemUl.appendChild(newElemLi);
+
+      elemUl.removeChild(elemUl.firstElementChild);
       // your code goes here
     </script>
   </body>

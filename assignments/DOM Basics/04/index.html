@@ -13,4 +13,26 @@
       <li>Hometown: <span id="hometown"></span></li>
     </ul>
   </body>
+  <script>
+    document.body.style.fontFamily = "Arial, sans-serif";
+    
+    var arr = ["Mike", "Dota", "Dharamshala"];
+    var ulElem = document.querySelector('ul');
+    var liArr = Array.from(ulElem.querySelectorAll('li'));
+
+    liArr.forEach((elem, index) => {
+      elem.textContent = arr[index];
+    });
+
+    liArr.forEach((elem, index) => {
+      elem.style.color = 'red';
+    });
+
+    var imgElem = document.createElement('img');
+    imgElem.setAttribute('src','index.jpg');
+    document.body.append(imgElem);
+
+
+
+  </script>
 </html>
