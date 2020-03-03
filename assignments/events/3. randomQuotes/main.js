@@ -2,8 +2,6 @@ var quotes;
 
 // Write your code here
 
-
-
 quotes = [
     {
         "quoteAuthor": "Thomas Edison",
@@ -313,4 +311,21 @@ quotes = [
         "quoteAuthor": "Johann Wolfgang von Goethe",
         "quoteText": "Great talent finds happiness in execution."
     }
+
 ];
+let quoteElem = document.createElement('div');
+document.body.append(quoteElem);
+document.body.onkeyup = function(e) {
+    if(e.keyCode ==  32){
+        changeQuote();
+    }
+}
+function changeQuote() {
+    let randIndex = getRandom(0, quotes.length-1); 
+    quoteElem.textContent = quotes[randIndex]['quoteText'] + " - "+ quotes[randIndex]['quoteAuthor'];
+}
+
+function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+changeQuote();

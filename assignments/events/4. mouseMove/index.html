@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Move Mouse Cursor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<style>
+    p {
+        font-size: 24px;
+    }
+</style>
+<body>
+
+<script>
+    let h1Elem = document.createElement('h1');
+    h1Elem.textContent = 'Move Mouse Cursor';
+    document.body.append(h1Elem);
+    let p1Elem = document.createElement('p');
+    let p2Elem = document.createElement('p');
+    let p3Elem = document.createElement('p');
+    let p4Elem = document.createElement('p');
+    document.body.append(p1Elem);
+    document.body.append(p2Elem);
+    document.body.append(p3Elem);
+    document.body.append(p4Elem);
+    document.onmousemove = function(event) {
+        p1Elem.textContent = event.screenX;
+        p2Elem.textContent = event.screenY;
+        p3Elem.textContent = event.clientX;
+        p4Elem.textContent = event.clientY;
+    };
+</script>
+</body>
+</html>
